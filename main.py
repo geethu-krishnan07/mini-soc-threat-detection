@@ -39,3 +39,15 @@ with open("alerts.txt", "a") as file:
         file.write("Severity: LOW\n")
 
     file.write("-" * 30 + "\n")
+    print("\n----- SOC ALERT SUMMARY -----")
+
+with open("alerts.txt", "r") as file:
+    logs = file.readlines()
+
+high_alerts = sum("Severity: HIGH" in line for line in logs)
+medium_alerts = sum("Severity: MEDIUM" in line for line in logs)
+low_alerts = sum("Severity: LOW" in line for line in logs)
+
+print("Total HIGH Alerts:", high_alerts)
+print("Total MEDIUM Alerts:", medium_alerts)
+print("Total LOW Alerts:", low_alerts)
