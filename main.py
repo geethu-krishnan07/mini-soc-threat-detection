@@ -7,3 +7,9 @@ print("=" * 45)
 print("SOC Monitoring Started...")
 print("System Time:", datetime.now())
 print("Status: Monitoring Active")
+print(" ")
+print("Failed Login Detection")
+failed_attempts = 3
+
+if failed_attempts >= 3:
+    print("ALERT: Multiple failed login attempts detected!")
