@@ -14,9 +14,15 @@ failed_attempts = int(input("Enter number of failed login attempts: "))
 
 print("Failed Login Attempts:", failed_attempts)
 
+print("\n----- SOC ALERT DETAILS -----")
+print("Failed Login Attempts:", failed_attempts)
+
 if failed_attempts >= 5:
-    print("HIGH ALERT: Possible brute-force attack!")
+    print("Severity: HIGH")
+    print("Alert: Possible brute-force attack!")
 elif failed_attempts >= 3:
-    print("MEDIUM ALERT: Suspicious login activity!")
+    print("Severity: MEDIUM")
+    print("Alert: Suspicious login activity!")
 else:
-    print("Status: Normal")
+    print("Severity: LOW")
+    print("Alert: Normal login activity")
