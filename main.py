@@ -10,9 +10,11 @@ print("Status: Monitoring Active")
 print(" ")
 print("Failed Login Detection")
 
-failed_attempts = [1, 2, 3]
+failed_attempts = int(input("Enter number of failed login attempts: "))
 
-print("Failed Login Attempts:", len(failed_attempts))
+print("Failed Login Attempts:", failed_attempts)
 
-if len(failed_attempts) >= 3:
+if failed_attempts >= 3:
     print("ALERT: Multiple failed login attempts detected!")
+else:
+    print("Status: Normal")
