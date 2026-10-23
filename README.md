@@ -21,15 +21,14 @@ A beginner-friendly Python cybersecurity project that simulates a Security Opera
 ## How to Run
 1. Clone the repository.
 2. Open the project folder.
-3. Run:
+3. Run the following command:
 
+   ```bash
    python main.py
-
-4. Enter the number of failed login attempts.
 
 ## Disclaimer
 This project is a beginner-level simulation. It does not monitor real system logs or detect actual attacks.
 
 ## Author
-Geethu Krishnan
+Geethu Krishnan G
 
