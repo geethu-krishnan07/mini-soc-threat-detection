@@ -59,3 +59,25 @@ try:
 
 except ValueError:
     print("Invalid input! Please enter a number.")
+print("\n----- SAMPLE LOG ANALYSIS -----")
+
+failed_logins = {}
+
+with open("sample_logs.txt", "r") as file:
+    for line in file:
+        if "Login: FAILED" in line:
+            ip = line.split("IP: ")[1].split()[0]
+
+            if ip in failed_logins:
+                failed_logins[ip] += 1
+            else:
+                failed_logins[ip] = 1
+
+for ip, count in failed_logins.items():
+    print("IP Address:", ip)
+    print("Failed Attempts:", count)
+
+    if count >= 3:
+        print("ALERT: Suspicious login activity detected!")
+
+    print()
